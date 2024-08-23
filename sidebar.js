@@ -1,8 +1,11 @@
 const sideBar = document.querySelector(".my-projects")
 import { displayContent } from "./content";
+import { addProject } from "./projects";
 import taskImage from "./src/tag.svg"
 
+
 export function displayProjects(projects) {
+    sideBar.innerHTML =  '<p>My Projects</p>';
     projects.forEach(element => {
         const projectElement = document.createElement("div");
         projectElement.className = "project"
