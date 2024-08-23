@@ -9,7 +9,4 @@ for (var i = 0; i < localStorage.length; i++){
   allProjects.push(loadProject(localStorage.key(i)));
 }
 
-// displayProjects(allProjects);
-
-
-removeProject("Example");
+displayProjects(allProjects);

@@ -1,7 +1,8 @@
 const sideBar = document.querySelector(".my-projects")
 import { displayContent } from "./content";
-import { addProject } from "./projects";
+import { addProject, removeProject } from "./projects";
 import taskImage from "./src/tag.svg"
+import { TODO } from "./todo-object";
 
 
 export function displayProjects(projects) {
@@ -12,9 +13,19 @@ export function displayProjects(projects) {
     const button = document.createElement("button")
     button.innerHTML = "+";
     button.addEventListener("click", () => {
-        addProject();
+        addProject([input.value, new TODO()]);
     })
     sideBar.appendChild(button);
+    const removeButton = document.createElement("button")
+    removeButton.innerHTML = "-";
+    removeButton.addEventListener("click", () => {
+        removeProject(input.value);
+    })
+    sideBar.appendChild(removeButton);
+
+    const input = document.createElement("input")
+    input.type = "text";
+    sideBar.appendChild(input);
 
     projects.forEach(element => {
         const projectElement = document.createElement("div");
