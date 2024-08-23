@@ -5,7 +5,16 @@ import taskImage from "./src/tag.svg"
 
 
 export function displayProjects(projects) {
-    sideBar.innerHTML =  '<p>My Projects</p>';
+    sideBar.innerHTML = "";
+
+    
+    sideBar.insertAdjacentHTML("beforeend","<p>My Projects</p>")
+    const button = document.createElement("button")
+    button.addEventListener("click", () => {
+        addProject();
+    })
+    sideBar.appendChild(button);
+
     projects.forEach(element => {
         const projectElement = document.createElement("div");
         projectElement.className = "project"
