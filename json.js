@@ -6,7 +6,7 @@ export function saveProject(project) {
 
 export function loadProject(project) {
     let returnArray = [];
-    let obj = JSON.parse(localStorage.getItem(project[0]));
+    let obj = JSON.parse(localStorage.getItem(project));
     returnArray.push(obj[0]);
     for (let i = 1; i < obj.length; i++) {
         let temp = new TODO();

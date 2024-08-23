@@ -1,11 +1,24 @@
+import { saveProject } from "./json";
+
 const main = document.querySelector(".main")
 
 export function displayContent(project) {
     main.innerHTML = project[0];
     project.slice(1).forEach(element => {
-        const temp = document.createElement("div")
-        temp.innerHTML = element.title
-        main.appendChild(temp);
+        const container = document.createElement("div")
+        const complete = document.createElement("input")
+        complete.type = "checkbox";
+        complete.checked = element.complete;
+        complete.addEventListener("click", () => {
+            element.complete = complete.checked;
+            saveProject(project);
+        })
+        container.appendChild(complete);
+        const due = document.createElement("span");
+        due.innerHTML = element.dueDate; 
+        container.insertAdjacentText("beforeend",element.title + " ");
+        container.appendChild(due)
+        main.appendChild(container);
     });
     
 }
