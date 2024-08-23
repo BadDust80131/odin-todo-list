@@ -15,6 +15,7 @@ export function loadProject(project) {
         temp.dueDate = obj[i].dueDate;
         temp.priority = obj[i].priority;
         temp.notes = obj[i].notes;
+        temp.complete = obj[i].complete;
         returnArray.push(temp);
     }
     return returnArray
