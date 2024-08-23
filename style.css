@@ -13,3 +13,49 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+div{
+  -webkit-box-sizing: border-box; 
+  -moz-box-sizing: border-box;    
+  box-sizing: border-box;      
+}
+
+body {
+  margin: 0px;
+}
+
+#app {
+  display: flex;
+  height: 100vh; /* Temp */
+}
+
+.sidebar {
+  flex: 1;
+  background-color: lightgray;
+  padding : 20px;
+}
+
+.project {
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.project-title {
+  display: flex;
+}
+
+.subtask {
+  font-size: 12px;
+}
+
+.project img {
+  width: 34px;
+}
+
+.main {
+  flex: 5;
+  background-color: red;
+}
