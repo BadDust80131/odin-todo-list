@@ -1,10 +1,14 @@
-const sideBar = document.querySelector(".sidebar")
-import taskImage from "./src/task.svg"
+const sideBar = document.querySelector(".my-projects")
+import { displayContent } from "./content";
+import taskImage from "./src/tag.svg"
 
 export function displayProjects(projects) {
     projects.forEach(element => {
         const projectElement = document.createElement("div");
         projectElement.className = "project"
+        projectElement.addEventListener("click", () => {
+            displayContent(element)
+        })
         sideBar.appendChild(projectElement);
 
         const projectTitle = document.createElement("div");
@@ -19,9 +23,13 @@ export function displayProjects(projects) {
         title.innerHTML = element[0]
         projectTitle.insertAdjacentElement('beforeend', title)
 
-        const subTask = document.createElement("div");
-        subTask.className = "subtask";
-        subTask.innerHTML = element[1].title;
-        projectElement.appendChild(subTask);
+        // const subTask = document.createElement("div");
+        // subTask.className = "subtask";
+        // let subTaskText = "";
+        // for (let i = 1; i < element.length; i++) {
+        //     subTaskText += element[i].title + "<br>"
+        // }
+        // subTask.innerHTML = subTaskText;
+        // projectElement.appendChild(subTask);
     });
 }
