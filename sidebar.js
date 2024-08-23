@@ -10,6 +10,7 @@ export function displayProjects(projects) {
     
     sideBar.insertAdjacentHTML("beforeend","<p>My Projects</p>")
     const button = document.createElement("button")
+    button.innerHTML = "+";
     button.addEventListener("click", () => {
         addProject();
     })
@@ -35,13 +36,13 @@ export function displayProjects(projects) {
         title.innerHTML = element[0]
         projectTitle.insertAdjacentElement('beforeend', title)
 
-        // const subTask = document.createElement("div");
-        // subTask.className = "subtask";
-        // let subTaskText = "";
-        // for (let i = 1; i < element.length; i++) {
-        //     subTaskText += element[i].title + "<br>"
-        // }
-        // subTask.innerHTML = subTaskText;
-        // projectElement.appendChild(subTask);
+        const subTask = document.createElement("div");
+        subTask.className = "subtask";
+        let subTaskText = "";
+        for (let i = 1; i < element.length; i++) {
+            subTaskText += element[i].title + "<br>"
+        }
+        subTask.innerHTML = subTaskText;
+        projectElement.appendChild(subTask);
     });
 }

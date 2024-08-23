@@ -87,3 +87,10 @@ body {
   background-color: white;
   padding: 20px;
 }
+
+button {
+  border: 1px solid lightcyan;
+  border-radius: 5px;
+  width: 40px;
+  background-color: white;
+}
