@@ -17,10 +17,10 @@ p {
   margin: 0px;
 }
 
-div{
-  -webkit-box-sizing: border-box; 
-  -moz-box-sizing: border-box;    
-  box-sizing: border-box;      
+div {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
@@ -35,7 +35,7 @@ body {
 .sidebar {
   width: 240px;
   background-color: #fbfaf8;
-  margin : 20px;
+  margin: 20px;
 }
 
 .project {
@@ -75,7 +75,7 @@ body {
 
 .subtask {
   font-size: 12px;
-  margin-left:30px;
+  margin-left: 30px;
 }
 
 .project img {
