@@ -1,7 +1,10 @@
 import { form } from "./form";
 import { saveProject } from "./json";
+import { addTask } from "./projects";
+import { TODO } from "./todo-object";
 
 const main = document.querySelector(".main");
+let input = document.querySelector(".share");
 
 export function displayContent(project) {
   main.innerHTML = project[0];
@@ -24,4 +27,12 @@ export function displayContent(project) {
     container.appendChild(due);
     main.appendChild(container);
   });
+  input = document.querySelector(".share");
+  const button = document.createElement("button");
+  button.innerHTML = "+";
+  button.addEventListener("click", () => {
+    console.log(input);
+    displayContent(addTask(project, new TODO(input.value)));
+  });
+  main.appendChild(button);
 }

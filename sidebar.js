@@ -25,6 +25,7 @@ export function displayProjects(projects) {
 
   const input = document.createElement("input");
   input.type = "text";
+  input.className = "share";
   sideBar.appendChild(input);
 
   projects.forEach((element) => {
