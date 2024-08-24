@@ -11,7 +11,9 @@ export function displayProjects(projects) {
   const button = document.createElement("button");
   button.innerHTML = "+";
   button.addEventListener("click", () => {
-    addProject([input.value, new TODO()]);
+    if (input.value != "") {
+      addProject([input.value, new TODO()]);
+    }
   });
   sideBar.appendChild(button);
   const removeButton = document.createElement("button");

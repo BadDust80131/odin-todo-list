@@ -1,3 +1,4 @@
+import { form } from "./form";
 import { saveProject } from "./json";
 
 const main = document.querySelector(".main");
@@ -6,6 +7,9 @@ export function displayContent(project) {
   main.innerHTML = project[0];
   project.slice(1).forEach((element) => {
     const container = document.createElement("div");
+    container.addEventListener("click", () => {
+      form(project, element);
+    });
     const complete = document.createElement("input");
     complete.type = "checkbox";
     complete.checked = element.complete;
