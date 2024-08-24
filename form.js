@@ -1,9 +1,11 @@
-import { updateTask } from "./projects";
+import { displayContent } from "./content";
+import { removeTask, updateTask } from "./projects";
 import { TODO } from "./todo-object";
 
 const modal = document.querySelector(".modal");
 const close = document.querySelector(".close");
 const container = document.querySelector(".form");
+const del = document.querySelector("#delete");
 
 const title = document.querySelector("#title");
 const description = document.querySelector("#description");
@@ -37,5 +39,9 @@ export function form(project, task) {
         complete.checked
       )
     );
+  });
+  del.addEventListener("click", () => {
+    modal.style.display = "none";
+    displayContent(removeTask(project, task));
   });
 }
