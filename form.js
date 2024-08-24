@@ -1,5 +1,6 @@
 const modal = document.querySelector(".modal");
 const close = document.querySelector(".close");
+const container = document.querySelector(".form");
 
 const title = document.querySelector("#title");
 const description = document.querySelector("#description");
@@ -20,4 +21,7 @@ export function form(project, task) {
   priority.checked = task.priority;
   notes.value = task.notes;
   complete.checked = task.complete;
+  container.addEventListener("submit", (event) => {
+    event.preventDefault();
+  });
 }

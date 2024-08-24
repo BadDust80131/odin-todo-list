@@ -96,6 +96,7 @@ button {
 }
 
 .modal {
+  background-color: white;
   display: none;
   position: fixed;
   z-index: 1;
