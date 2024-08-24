@@ -19,7 +19,7 @@ export function displayContent(project) {
     });
     container.appendChild(complete);
     const due = document.createElement("span");
-    due.innerHTML = element.dueDate.slice(0, 10);
+    due.innerHTML = element.dueDate;
     container.insertAdjacentText("beforeend", element.title + " ");
     container.appendChild(due);
     main.appendChild(container);

@@ -1,4 +1,5 @@
 // import { TODO } from "./todo-object";
+import { displayContent } from "./content.js";
 import { saveProject, loadProject } from "./json.js";
 import { displayProjects } from "./sidebar.js";
 
@@ -23,4 +24,28 @@ export function removeProject(projectName) {
     saveProject(allProjects[i]);
   }
   displayProjects(allProjects);
+}
+
+export function updateTask(project, task, newTask) {
+  displayContent(addTask(removeTask(project, task), newTask));
+}
+
+export function removeTask(project, task) {
+  const allTasks = [project[0]];
+  for (let i = 1; i < project.length; i++) {
+    if (project[i] != task) {
+      allTasks.push(project[i]);
+    }
+  }
+  removeProject(project[0]);
+  addProject(allTasks);
+
+  return allTasks;
+}
+
+export function addTask(project, task) {
+  project.push(task);
+  removeProject(project[0]);
+  addProject(project);
+  return project;
 }

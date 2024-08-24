@@ -12,6 +12,7 @@ export function loadProject(project) {
     let temp = new TODO();
     temp.title = obj[i].title;
     temp.description = obj[i].description;
+    console.log(obj[i].dueDate);
     temp.dueDate = obj[i].dueDate;
     temp.priority = obj[i].priority;
     temp.notes = obj[i].notes;
