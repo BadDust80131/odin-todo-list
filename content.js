@@ -31,8 +31,9 @@ export function displayContent(project) {
   const button = document.createElement("button");
   button.innerHTML = "+";
   button.addEventListener("click", () => {
-    console.log(input);
-    displayContent(addTask(project, new TODO(input.value)));
+    if (input.value != "") {
+      displayContent(addTask(project, new TODO(input.value)));
+    }
   });
   main.appendChild(button);
 }

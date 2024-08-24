@@ -3,6 +3,8 @@ import { displayContent } from "./content.js";
 import { saveProject, loadProject } from "./json.js";
 import { displayProjects } from "./sidebar.js";
 
+const main = document.querySelector(".main");
+
 export function addProject(project = ["Example 462"]) {
   saveProject(project);
   const allProjects = [];
@@ -24,6 +26,9 @@ export function removeProject(projectName) {
     saveProject(allProjects[i]);
   }
   displayProjects(allProjects);
+  if (main.innerHTML.includes(projectName)) {
+    main.innerHTML = "";
+  }
 }
 
 export function updateTask(project, task, newTask) {
