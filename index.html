@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+    <script type="module" crossorigin src="/assets/index-CBh9lKfX.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-UJ8BZiY4.css">
+  </head>
+  <body>
+    <div id="app">
+      <div class="sidebar">
+        <div class="my-projects">
+          <p>My Projects</p>
+        </div>
+      </div>
+      <div class="main"></div>
+    </div>
+    <div class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <form action="" class="form">
+          <label for="title">Title:</label><br />
+          <input
+            type="text"
+            id="title"
+            name="title"
+            placeholder="Enter the task name here"
+          /><br /><br />
+
+          <label for="description">Description:</label><br />
+          <textarea
+            id="description"
+            name="description"
+            rows="4"
+            cols="50"
+            placeholder="Enter a detailed description of the task"
+          ></textarea
+          ><br /><br />
+
+          <label for="date">Due Date:</label><br />
+          <input type="text" id="date" name="date" /><br /><br />
+
+          <label for="priority">Priority:</label><br />
+          <input type="checkbox" id="priority" name="priority" /> High
+          Priority<br /><br />
+
+          <label for="notes">Notes:</label><br />
+          <textarea
+            id="notes"
+            name="notes"
+            rows="4"
+            cols="50"
+            placeholder="Additional notes or comments about the task"
+          ></textarea
+          ><br /><br />
+
+          <label for="complete">Complete:</label><br />
+          <input type="checkbox" id="complete" name="complete" /> Mark as
+          complete<br /><br />
+
+          <input type="submit" value="Submit" id="submit" />
+          <input type="button" value="Delete" id="delete" />
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
